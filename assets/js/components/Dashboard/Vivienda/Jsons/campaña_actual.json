@@ -1,0 +1,22 @@
+[
+    {
+        "value" : "autogestión",
+        "label" : "autogestión"
+    },
+    {
+        "value" : "Inscrito 5º contenedor",
+        "label" : "Inscrito 5º contenedor"
+    },
+    {
+        "value" : "Inscrito compostaje",
+        "label" : "Inscrito compostaje"
+    },
+    {
+        "value" : "Inscrito compostaje y Inscrito 5º contenedor ",
+        "label" : "Inscrito compostaje y Inscrito 5º contenedor"
+    },
+    {
+        "value" : "No inscrito",
+        "label" : "No inscrito"
+    }
+]

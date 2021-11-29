@@ -1,0 +1,7 @@
+body {
+    background-color: lightgray;
+}
+
+.border:focus{
+    border: 300px solid red !important;
+}

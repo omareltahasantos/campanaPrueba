@@ -1,0 +1,298 @@
+[
+    {
+        "value" : "De Amatriain",
+        "label" : "De Amatriain"
+    },
+    {
+        "value" : "San Esteban  De Amatriain",
+        "label" : "San Esteban  De Amatriain"
+    },
+    {
+        "value" : "San Bartolome De Amunarrizqueta",
+        "label" : "San Bartolome De Amunarrizqueta"
+    },
+    {
+        "value" : "De Artariain",
+        "label" : "De Artariain"
+    },
+    {
+        "value" : "San Juan",
+        "label" : "San Juan"
+    },
+    {
+        "value" : "Abadia",
+        "label" : "Abadia"
+    },
+    {
+        "value" : "Agrupacion Chapardia",
+        "label" : "Agrupacion Chapardia"
+    },
+    {
+        "value" : "Arzobispo Aranguren",
+        "label" : "Arzobispo Aranguren"
+    },
+    {
+        "value" : "Catalain",
+        "label" : "Catalain"
+    },
+    {
+        "value" : "Cidacos",
+        "label" : "Cidacos"
+    },
+    {
+        "value" : "Correos",
+        "label" : "Correos"
+    },
+    {
+        "value" : "Correos",
+        "label" : "Correos"
+    },
+    {
+        "value" : "De La Constitucion",
+        "label" : "De La Constitucion"
+    },
+    {
+        "value" : "Damian Iturria",
+        "label" : "Damian Iturria"
+    },
+    {
+        "value" : "De La Fuente",
+        "label" : "De La Fuente"
+    },
+    {
+        "value" : "De Los Fueros",
+        "label" : "De Los Fueros"
+    },
+    {
+        "value" : "De Navarra",
+        "label" : "De Navarra"
+    },
+    {
+        "value" : "De Orba",
+        "label" : "De Orba"
+    },
+    {
+        "value" : "Del Maestro Turrillas",
+        "label" : "Del Maestro Turrillas"
+    },
+    {
+        "value" : "Diseminados",
+        "label" : "Diseminados"
+    },
+    {
+        "value" : "Doctor Navarro",
+        "label" : "Doctor Navarro"
+    },
+    {
+        "value" : "Elena Aranguren",
+        "label" : "Elena Aranguren"
+    },
+    {
+        "value" : "Elorza Y Rada",
+        "label" : "Elorza Y Rada"
+    },
+    {
+        "value" : "Etxeko Jaureguizar",
+        "label" : "Etxeko Jaureguizar"
+    },
+    {
+        "value" : "Industrial",
+        "label" : "Industrial"
+    },
+    {
+        "value" : "Martin De Leoz",
+        "label" : "Martin De Leoz"
+    },
+    {
+        "value" : "Mayor",
+        "label" : "Mayor"
+    },
+    {
+        "value" : "Mendiariz",
+        "label" : "Mendiariz"
+    },
+    {
+        "value" : "Orisoain",
+        "label" : "Orisoain"
+    },
+    {
+        "value" : "Palacio De Drundin",
+        "label" : "Palacio De Drundin"
+    },
+    {
+        "value" : "Perez De Ciriza",
+        "label" : "Perez De Ciriza"
+    },
+    {
+        "value" : "Rochapea",
+        "label" : "Rochapea"
+    },
+    {
+        "value" : "San Bartolome",
+        "label" : "San Bartolome"
+    },
+    {
+        "value" : "Santa Lucia",
+        "label" : "Santa Lucia"
+    },
+    {
+        "value" : "Santa Maria",
+        "label" : "Santa Maria"
+    },
+    {
+        "value" : "Solchaga",
+        "label" : "Solchaga"
+    },
+    {
+        "value" : "Unzué",
+        "label" : "Unzué"
+    },
+    {
+        "value" : "Virgen De Egipto",
+        "label" : "Virgen De Egipto"
+    },
+    {
+        "value" : "Zarranguilo",
+        "label" : "Zarranguilo"
+    },
+    {
+        "value" : "General De Bariain",
+        "label" : "General De Bariain"
+    },
+    {
+        "value" : "Abete",
+        "label" : "Abete"
+    },
+    {
+        "value" : "Ayuntamiento",
+        "label" : "Ayuntamiento"
+    },
+    {
+        "value" : "Boyeral",
+        "label" : "Boyeral"
+    },
+    {
+        "value" : "Cardete",
+        "label" : "Cardete"
+    },
+    {
+        "value" : "Carrera De Aragon",
+        "label" : "Carrera De Aragon"
+    },
+    {
+        "value" : "Centro",
+        "label" : "Centro"
+    },
+    {
+        "value" : "Cierzo",
+        "label" : "Cierzo"
+    },
+    {
+        "value" : "Cordon",
+        "label" : "Cordon"
+    },
+    {
+        "value" : "Corta",
+        "label" : "Corta"
+    },
+    {
+        "value" : "De Pitillas",
+        "label" : "De Pitillas"
+    },
+    {
+        "value" : "Diseminado",
+        "label" : "Diseminado"
+    },
+    {
+        "value" : "El Peso",
+        "label" : "El Peso"
+    },
+    {
+        "value" : "El Prado",
+        "label" : "El Prado"
+    },
+    {
+        "value" : "Fontana",
+        "label" : "Fontana"
+    },
+    {
+        "value" : "Huertas De Beire",
+        "label" : "Huertas De Beire"
+    },
+    {
+        "value" : "Ilagares",
+        "label" : "Ilagares"
+    },
+    {
+        "value" : "La Blanca",
+        "label" : "La Blanca"
+    },
+    {
+        "value" : "La Lavandera",
+        "label" : "La Lavandera"
+    },
+    {
+        "value" : "La Rueda",
+        "label" : "La Rueda"
+    },
+    {
+        "value" : "La Serna",
+        "label" : "La Serna"
+    },
+    {
+        "value" : "Las Eras",
+        "label" : "Las Eras"
+    },
+    {
+        "value" : "Lázaro Galdiano",
+        "label" : "Lázaro Galdiano"
+    },
+    {
+        "value" : "Mairaga",
+        "label" : "Mairaga"
+    },
+    {
+        "value" : "Nava",
+        "label" : "Nava"
+    },
+    {
+        "value" : "Norte",
+        "label" : "Norte"
+    },
+    {
+        "value" : "Nueva",
+        "label" : "Nueva"
+    },
+    {
+        "value" : "Olite",
+        "label" : "Olite"
+    },
+    {
+        "value" : "San Francisco Javier",
+        "label" : "San Francisco Javier"
+    },
+    {
+        "value" : "San Millan",
+        "label" : "San Millan"
+    },
+    {
+        "value" : "Santa Catalina",
+        "label" : "Santa Catalina"
+    },
+    {
+        "value" : "Sur",
+        "label" : "Sur"
+    },
+    {
+        "value" : "Ujue",
+        "label" : "Ujue"
+    },
+    {
+        "value" : "Victoriano Flamarique",
+        "label" : "Victoriano Flamarique"
+    },
+    {
+        "value" : "",
+        "label" : ""
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+      "value": "Av.",
+      "label": "Av."
+    },
+    {
+      "value": "Barrio",
+      "label": "Barrio"
+    },
+    {
+      "value": "Belena",
+      "label": "Belena"
+    },
+    {
+      "value": "C./",
+      "label": "C./"
+    },
+    {
+      "value": "Calleja",
+      "label": "Calleja"
+    },
+    {
+      "value": "Callejón",
+      "label": "Callejón"
+    },
+    {
+      "value": "Cmno.",
+      "label": "Cmno."
+    },
+    {
+      "value": "Cetra.",
+      "label": "Cetra."
+    },
+    {
+      "value": "Ds.",
+      "label": "Ds."
+    },
+    {
+      "value": "Gpo.",
+      "label": "Gpo."
+    },
+    {
+      "value": "Lugar",
+      "label": "Lugar"
+    },
+    {
+      "value": "Paraje",
+      "label": "Paraje"
+    },
+    {
+      "value": "Pgno.",
+      "label": "Pgno."
+    },
+    {
+      "value": "Plazuela",
+      "label": "Plazuela"
+    },
+    {
+      "value": "Prolong.",
+      "label": "Prolong"
+    },
+    {
+      "value": "Pso.",
+      "label": "Pso."
+    },
+    {
+      "value": "Pza.",
+      "label": "Pza."
+    },
+    {
+      "value": "Rda.",
+      "label": "Rda."
+    },
+    {
+      "value": "Rincón",
+      "label": "Rincón"
+    },
+    {
+      "value": "Rua",
+      "label": "Rua"
+    },
+    {
+      "value": "Tr.",
+      "label": "Tr."
+    }
+]

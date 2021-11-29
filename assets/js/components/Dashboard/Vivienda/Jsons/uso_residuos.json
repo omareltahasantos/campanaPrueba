@@ -1,0 +1,52 @@
+[
+    {
+        "value" : "Bares, Cines y Taller < 7 ",
+        "label" : "Bares, Cines y Taller < 7 "
+    },
+    {
+        "value" : "Camping y Residencias < 100",
+        "label" : "Camping y residencias < 100"
+    },
+    {
+        "value" : "Comercio/Oficinas <= 6tra.",
+        "label" : "Comercio/Oficinas <= 6tra."
+    },
+    {
+        "value" : "Comercio Alimentación  <= 3",
+        "label" : "Comercio Alimentación  <= 3"
+    },
+    {
+        "value" : "Comercio Alimentación > 3",
+        "label" : "Comercio Alimentación > 3"
+    },
+    {
+        "value" : "Industria y Restaurante ",
+        "label" : "Industria y Restaurante "
+    },
+    {
+        "value" : "Local Com. Excepto Alimentac.",
+        "label" : "Local Com. Excepto Alimentac."
+    },
+    {
+        "value" : "Pequeñas industrias",
+        "label" : "Pequeñas industrias"
+    },
+    {
+        "value" : "Residencias y Asilos",
+        "label" : "Residencias y Asilos"
+    },
+    {
+        "value" : "Soc.Gast., Talleres y Of. ",
+        "label" : "Soc.Gast., Talleres y Of. "
+    },
+    {
+        "value" : "Vivienda",
+        "label" : "Vivienda"
+    },
+    {
+        "value" : "Vacías",
+        "label" : "Vacías"
+    }
+
+    
+]
