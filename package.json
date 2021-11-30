@@ -11,13 +11,13 @@
         "react-dom": "^17.0.2",
         "regenerator-runtime": "^0.13.2",
         "stimulus": "^2.0.0",
-        "webpack-notifier": "^1.6.0",
+        "webpack-notifier": "^1.6.0"
 
     },
     "license": "UNLICENSED",
     "private": true,
     "engines": {
-        "yarn": "1.x"
+        "node": "17.0.1"
       },
     "scripts": {
         "build": "webpack -p --config ./resources/webpack/webpack.config.js --display-error-details",
