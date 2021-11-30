@@ -19,8 +19,8 @@ class UserController extends AbstractController
      */
     public function ping()
     {
-        return $this->json([
-            'message' => 'pong'
+        return $this->render('user/index.html.twig', [
+            'controller_name' => 'UserController',
         ]);
     }
     /**
