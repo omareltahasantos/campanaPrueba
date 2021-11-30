@@ -45,7 +45,7 @@ export function Login() {
           setUser(foundUser);
         
 
-         window.location.href='http://localhost:8000/'
+         window.location.href='https://campana-organicax.herokuapp.com/'
           
           
          
@@ -104,7 +104,7 @@ export function Login() {
             //store user in session storage
             sessionStorage.setItem('user', JSON.stringify(jsonResponse) )
 
-            window.location.href='http://localhost:8000/'
+            window.location.href='https://campana-organicax.herokuapp.com/'
 
            
 
