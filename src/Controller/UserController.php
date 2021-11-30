@@ -209,7 +209,7 @@ class UserController extends AbstractController
 
     //Listar viviendas
     /**
-     * @Route("/api/viviendas", name="getsHousing")
+     * @Route("/api/vivienda", name="getsHousing")
      */
     public function getHousing(){
 
