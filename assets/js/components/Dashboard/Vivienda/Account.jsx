@@ -29,7 +29,7 @@ useEffect(() => {
 //Recibe todas las viviendas
 const getUserData = () => {
 
-    axios.get('https://campana-organicax.herokuapp.com/api/Viviendas', {
+    axios.get('https://campana-organicax.herokuapp.com/api/viviendas', {
 
     })
     .then(function (response) {
@@ -58,6 +58,8 @@ const getUserData = () => {
           
         }
         setViviendas(viviendas)
+      }else {
+        console.log('No recibo nada!');
       }
 
     })
