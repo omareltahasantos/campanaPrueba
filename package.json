@@ -20,9 +20,8 @@
         "node": "17.0.1"
       },
     "scripts": {
-        "build": "webpack --mode production --config ./resources/webpack/webpack.config.js --display-error-details",
-        "watch": "webpack -d --watch --config ./resources/webpack/webpack.config.js --display-error-details",
-        "heroku-postbuild": "webpack --mode production --config ./resources/webpack/webpack.config.js",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress",
         "dev-server": "encore dev-server",
         "dev": "encore dev"
     },
