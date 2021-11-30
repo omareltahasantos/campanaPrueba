@@ -46,6 +46,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "heroku/heroku-buildpack-php": "dev-master",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "5.3.*",
         "symfony/css-selector": "5.3.*",
@@ -54,7 +55,7 @@
         "symfony/phpunit-bridge": "^5.3",
         "symfony/stopwatch": "5.3.*",
         "symfony/web-profiler-bundle": "5.3.*",
-        "heroku/heroku-buildpack-php" : "dev-master"
+        "symfony/web-server-bundle": "^4.4.2"
     },
     "config": {
         "optimize-autoloader": true,
