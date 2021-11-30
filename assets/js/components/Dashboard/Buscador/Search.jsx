@@ -117,7 +117,7 @@ export function Search({user, listItemPressed}) {
       );
     const getNombreVias = () => {
 
-        axios.get('http://localhost:8000/api/NombreVias', {
+        axios.get('https://campana-organicax.herokuapp.com/api/NombreVias', {
 
     })
     .then(function (response) {
@@ -159,7 +159,7 @@ export function Search({user, listItemPressed}) {
             nombreViaSelected : JSON.stringify(nombreViaSelected),
         }
 
-        axios.get('http://localhost:8000/api/search', {
+        axios.get('https://campana-organicax.herokuapp.com/api/search', {
             params: jsonStates
           })
           .then(function (response) {
@@ -215,7 +215,7 @@ export function Search({user, listItemPressed}) {
      ///Funciones para la paginacion///
 
      const countAll = (jsonStates) => {
-        axios.get('http://localhost:8000/api/countSearch', {
+        axios.get('https://campana-organicax.herokuapp.com/api/countSearch', {
             params: jsonStates
           })
           .then(function (response) {
@@ -249,7 +249,7 @@ export function Search({user, listItemPressed}) {
             rowsPerPage: rowsPerPage,
             secondParamNextResults: secondParamNextResults
         }
-        axios.get('http://localhost:8000/api/nextSearch', {
+        axios.get('https://campana-organicax.herokuapp.com/api/nextSearch', {
             params: jsonStates
           })
           .then(function (response) {
@@ -282,7 +282,7 @@ export function Search({user, listItemPressed}) {
             rowsPerPage: rowsPerPage,
             secondParamPrevResults: secondParamPrevResults
         }
-        axios.get('http://localhost:8000/api/prevSearch', {
+        axios.get('https://campana-organicax.herokuapp.com/api/prevSearch', {
             params: jsonStates
           })
           .then(function (response) {

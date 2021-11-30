@@ -65,7 +65,7 @@ export function Login() {
         email: email,
         password: password,
       }
-      const URL_API = 'http://localhost:8000/api/checkUser'
+      const URL_API = 'https://campana-organicax.herokuapp.com/api/checkUser'
       sendDataToApi(userJson, URL_API);
     };
 
@@ -77,7 +77,7 @@ export function Login() {
         const emailConverted = JSON.stringify(userJson.email)
         const passwordConverted = JSON.stringify(userJson.password)
 
-        axios.get('http://localhost:8000/api/checkifUserExists', {
+        axios.get('https://campana-organicax.herokuapp.com/api/checkifUserExists', {
         params: {
           email: emailConverted,
           password: passwordConverted

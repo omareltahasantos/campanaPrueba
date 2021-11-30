@@ -119,7 +119,7 @@ export function FormEditar({result, handleClose, changeArrayEditar}) {
         }
          
 
-        axios.get('http://localhost:8000/api/updateVivienda', {
+        axios.get('https://campana-organicax.herokuapp.com/api/updateVivienda', {
             params: dataVivienda
           })
           .then(function (response) {

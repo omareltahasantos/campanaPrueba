@@ -129,7 +129,7 @@ export function Sidebar({user, setUser}) {
 
     const getAllUsers = () => {
 
-      axios.get('http://localhost:8000/api/UsersList', {
+      axios.get('https://campana-organicax.herokuapp.com/api/UsersList', {
 
       })
       .then(function (response) {

@@ -87,7 +87,7 @@ export  function FormAñadir({handleClose, getNewHousing}) {
 
         e.preventDefault();
 
-        axios.get('http://localhost:8000/api/newHousing', {
+        axios.get('https://campana-organicax.herokuapp.com/api/newHousing', {
         params: dataVivienda
       })
       .then(function (response) {
