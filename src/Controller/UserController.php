@@ -17,10 +17,10 @@ class UserController extends AbstractController
     /**
      * @Route("/", name="default")
      */
-    public function default()
+    public function ping()
     {
-        return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController',
+        return $this->json([
+            'message' => 'pong'
         ]);
     }
     /**
