@@ -15,6 +15,15 @@ use Symfony\Component\Validator\Constraints\DateTimeInterface;
 class UserController extends AbstractController
 {
     /**
+     * @Route("/", name="default")
+     */
+    public function ping()
+    {
+        return $this->json([
+            'message' => 'pong'
+        ]);
+    }
+    /**
      * @Route("/{reactRouting}", name="home", defaults={"reactRouting": null})
      */
     public function index(): Response
