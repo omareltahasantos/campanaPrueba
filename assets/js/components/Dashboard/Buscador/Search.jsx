@@ -603,7 +603,7 @@ export function Search({user, listItemPressed}) {
                                                     variant="contained"
                                                     sx={{ mt: 4, mb: 3, }}
                                                 >
-                                                    Buscar
+                                                    Buscarsdada
                                                 </Button>
                                             </Grid>
                                         </Grid>
