@@ -379,249 +379,249 @@ export function Search({user, listItemPressed}) {
 
     return (
         <Fragment>
-            <Box sx={{ flexGrow: 1 }} className='pb-3'>
-                <Grid container spacing={2}>
-                    <Grid item md={12}>
-                        <Box
-                            style={{marginLeft: '0px', marginRight: '0px', marginBottom: '3px'}}
-                            sx={{
-                            justifyContent: 'center',
-                            p: 1,
-                            m: 1,
-                            bgcolor: 'background.paper',
-                            }}
-                        >
-                            <Grid container spacing={2}>
-                                <Grid item md={12}>
-                                    <h4 style={{textAlign: 'center'}}>{listItemPressed}</h4>
-                                </Grid>
+            <Grid container spacing={2}>
+                <Grid item md={12}>
+                    <Box
+                        style={{marginLeft: '0px', marginRight: '0px', marginBottom: '3px'}}
+                        sx={{
+                        justifyContent: 'center',
+                        p: 1,
+                        m: 1,
+                        bgcolor: 'background.paper',
+                        }}
+                    >
+                        <Grid container spacing={2}>
+                            <Grid item lg={12} xs={12}>
+                                <h3 style={{textAlign: 'center'}}>{listItemPressed}</h3>
                             </Grid>
-                            <ThemeProvider theme={theme}>
-                                <div className='container text-center'>
-                                    <Box component="form" onSubmit={lookingForResults} noValidate sx={{ mt: 1 }}>
-                                        <Grid container spacing={2}>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size='small'
-                                                    color="brown"
-                                                    margin="normal"
-                                                    select
-                                                    fullWidth
-                                                    label= 'Uso de resíduos'
-                                                    onChange={(e) => setUsoResiduos(e.target.value)}
-                                                >
-                                                    {uso_residuos.map((res) => (
-                                                        <MenuItem key={res.value} value={res.value}>
-                                                        {res.label}
-                                                        </MenuItem>
-                                                    ))}
-                                                </TextField>
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size='small'
-                                                    color="brown"
-                                                    margin="normal"
-                                                    select
-                                                    fullWidth
-                                                    label= 'Tipo de Vía'
-                                                    onChange={(e) => setTipoVia(e.target.value)}
-                                                    >
-                                                    {TipoVia.map((via) => (
-                                                        <MenuItem key={via.value} value={via.value}>
-                                                        {via.label}
-                                                        </MenuItem>
-                                                    ))}
-                                                </TextField>
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size='small'
-                                                    color="brown"
-                                                    margin="normal"
-                                                    select
-                                                    fullWidth
-                                                    label= 'Localidades'
-                                                    onChange={(e) => setLocalidades(e.target.value)}
-                                                >
-                                                    {Localidades.map((localidad) => (
-                                                        <MenuItem key={localidad.value} value={localidad.value}>
-                                                        {localidad.label}
-                                                        </MenuItem>
-                                                    ))}
-                                                </TextField>
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size='small'
-                                                    color="brown"
-                                                    margin="normal"
-                                                    select
-                                                    fullWidth
-                                                    label= 'Campaña anterior'
-                                                    onChange={(e) => setCampañaAnterior(e.target.value)}
-                                                >
-                                                    {CampañaAnterior.map((campAnt) => (
-                                                        <MenuItem key={campAnt.value} value={campAnt.value}>
-                                                        {campAnt.label}
-                                                        </MenuItem>
-                                                    ))}
-                                                </TextField>
-                                            </Grid>
+                        </Grid>
+                        <ThemeProvider theme={theme}>
+                            <div className='container text-center'>
+                                <Box component="form" onSubmit={lookingForResults} noValidate sx={{ flexGrow: 1, mt: 1 }}>
+                                    <Grid container spacing={2}>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size='small'
+                                                color="brown"
+                                                margin="normal"
+                                                select
+                                                fullWidth
+                                                label= 'Uso de resíduos'
+                                                onChange={(e) => setUsoResiduos(e.target.value)}
+                                            >
+                                                {uso_residuos.map((res) => (
+                                                    <MenuItem key={res.value} value={res.value}>
+                                                    {res.label}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
                                         </Grid>
-                                        <Grid container spacing={2}>
-                                            <Grid item md={3}>
-                                            <DataListInput
-                                                placeholder="Nombre de las vías"
-                                                items={itemsNombreVia}
-                                                onSelect={onSelect}
-                                                requiredInputLength = {1}
-                                                inputClassName={classes.inputDataList}
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size='small'
+                                                color="brown"
+                                                margin="normal"
+                                                select
+                                                fullWidth
+                                                label= 'Tipo de Vía'
+                                                onChange={(e) => setTipoVia(e.target.value)}
+                                                >
+                                                {TipoVia.map((via) => (
+                                                    <MenuItem key={via.value} value={via.value}>
+                                                    {via.label}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size='small'
+                                                color="brown"
+                                                margin="normal"
+                                                select
+                                                fullWidth
+                                                label= 'Localidades'
+                                                onChange={(e) => setLocalidades(e.target.value)}
+                                            >
+                                                {Localidades.map((localidad) => (
+                                                    <MenuItem key={localidad.value} value={localidad.value}>
+                                                    {localidad.label}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size='small'
+                                                color="brown"
+                                                margin="normal"
+                                                select
+                                                fullWidth
+                                                label= 'Campaña anterior'
+                                                onChange={(e) => setCampañaAnterior(e.target.value)}
+                                            >
+                                                {CampañaAnterior.map((campAnt) => (
+                                                    <MenuItem key={campAnt.value} value={campAnt.value}>
+                                                    {campAnt.label}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container spacing={2}>
+                                        <Grid item md={3} sm={6} xs={12} >
+                                        <DataListInput
+                                            placeholder="Nombre de las vías"
+                                            items={itemsNombreVia}
+                                            onSelect={onSelect}
+                                            requiredInputLength = {1}
+                                            inputClassName={classes.inputDataList}
 
-                                                />
-                                            </Grid>
-                                            <Grid item md={3}>
+                                            />
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                        <TextField
+                                            size="small"
+                                            color='brown'
+                                            margin="normal"
+                                            required
+                                            fullWidth
+                                            id="contrato"
+                                            label="Contrato"
+                                            name="Contrato"
+                                            type="number"
+                                            autoComplete="Contrato"
+                                            autoFocus
+                                            onChange={ (e) => setContrato(e.target.value)}
+                                        />
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
                                             <TextField
                                                 size="small"
                                                 color='brown'
                                                 margin="normal"
                                                 required
                                                 fullWidth
-                                                id="contrato"
-                                                label="Contrato"
-                                                name="Contrato"
-                                                type="number"
-                                                autoComplete="Contrato"
+                                                id="Nº PORTAL"
+                                                label="Nº Portal"
+                                                name="Nº Portal"
+                                                type="text"
+                                                autoComplete="Nº Portal"
                                                 autoFocus
-                                                onChange={ (e) => setContrato(e.target.value)}
+                                                onChange={ (e) => setNumPortal(e.target.value)}
                                             />
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="Nº PORTAL"
-                                                    label="Nº Portal"
-                                                    name="Nº Portal"
-                                                    type="text"
-                                                    autoComplete="Nº Portal"
-                                                    autoFocus
-                                                    onChange={ (e) => setNumPortal(e.target.value)}
-                                                />
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="Bloque"
-                                                    label="Bloque"
-                                                    name="Bloque"
-                                                    type="number"
-                                                    autoComplete="Bloque"
-                                                    autoFocus
-                                                    onChange={ (e) => setBloque(e.target.value)}
-                                                />
-                                            </Grid>
                                         </Grid>
-                                        <Grid container spacing={2}>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="escalera"
-                                                    label="Escalera"
-                                                    name="Escalera"
-                                                    type="text"
-                                                    autoComplete="Escalera"
-                                                    autoFocus
-                                                    onChange={ (e) => setEscalera(e.target.value)}
-                                                />
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="piso"
-                                                    label="Piso"
-                                                    name="Piso"
-                                                    type="text"
-                                                    autoComplete="Piso"
-                                                    autoFocus
-                                                    onChange={ (e) => setPiso(e.target.value)}
-                                                />
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="Puerta"
-                                                    label="Puerta"
-                                                    name="Puerta"
-                                                    type="text"
-                                                    autoComplete="Puerta"
-                                                    autoFocus
-                                                    onChange={ (e) => setPuerta(e.target.value)}
-                                                />
-                                            </Grid>
-                                            <Grid item md={3}>
-                                                <TextField
-                                                    size="small"
-                                                    color='brown'
-                                                    margin="normal"
-                                                    required
-                                                    fullWidth
-                                                    id="Municipio"
-                                                    label="Municipio"
-                                                    name="Municipio"
-                                                    type="text"
-                                                    autoComplete="Municipio"
-                                                    autoFocus
-                                                    onChange={ (e) => setMunicipio(e.target.value)}
-                                                />
-                                            </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size="small"
+                                                color='brown'
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Bloque"
+                                                label="Bloque"
+                                                name="Bloque"
+                                                type="number"
+                                                autoComplete="Bloque"
+                                                autoFocus
+                                                onChange={ (e) => setBloque(e.target.value)}
+                                            />
                                         </Grid>
-                                        <Grid container spacing={2}>
-                                            <Grid item md={12}>
-                                                <Button
-                                                    type="submit"
-                                                    color="brown"
-                                                    variant="contained"
-                                                    sx={{ mt: 4, mb: 3, }}
-                                                >
-                                                    Buscarsdada
-                                                </Button>
-                                            </Grid>
+                                    </Grid>
+                                    <Grid container spacing={2}>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size="small"
+                                                color='brown'
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="escalera"
+                                                label="Escalera"
+                                                name="Escalera"
+                                                type="text"
+                                                autoComplete="Escalera"
+                                                autoFocus
+                                                onChange={ (e) => setEscalera(e.target.value)}
+                                            />
                                         </Grid>
-                                    </Box>
-                                </div>
-                            </ThemeProvider>
-                        </Box>
-                    </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size="small"
+                                                color='brown'
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="piso"
+                                                label="Piso"
+                                                name="Piso"
+                                                type="text"
+                                                autoComplete="Piso"
+                                                autoFocus
+                                                onChange={ (e) => setPiso(e.target.value)}
+                                            />
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size="small"
+                                                color='brown'
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Puerta"
+                                                label="Puerta"
+                                                name="Puerta"
+                                                type="text"
+                                                autoComplete="Puerta"
+                                                autoFocus
+                                                onChange={ (e) => setPuerta(e.target.value)}
+                                            />
+                                        </Grid>
+                                        <Grid item md={3} sm={6} xs={12}>
+                                            <TextField
+                                                size="small"
+                                                color='brown'
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Municipio"
+                                                label="Municipio"
+                                                name="Municipio"
+                                                type="text"
+                                                autoComplete="Municipio"
+                                                autoFocus
+                                                onChange={ (e) => setMunicipio(e.target.value)}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container spacing={2}>
+                                        <Grid item md={12} sm={6} xs={12}>
+                                            <Button
+                                                type="submit"
+                                                color="brown"
+                                                variant="contained"
+                                                sx={{ mt: 4, mb: 3, }}
+                                            >
+                                                Buscar
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
+                                </Box>
+                            </div>
+                        </ThemeProvider>
+
+
+                    </Box>
                 </Grid>
-                {
-                    displayTable ? (
-                        <Fragment>
-                             <SearchTable searchResult={searchResult} changeArrayEditar={changeArrayEditar} countResults={countResults} nextResults={nextResults} prevResults={prevResults}></SearchTable>
-                        </Fragment>
-                    ):
-                    <h1>{noResults}</h1>
-                }
-            </Box>
+            </Grid>                               
+            {
+                displayTable ? (
+                    <Fragment>
+                            <SearchTable searchResult={searchResult} changeArrayEditar={changeArrayEditar} countResults={countResults} nextResults={nextResults} prevResults={prevResults}></SearchTable>
+                    </Fragment>
+                ):
+                <h1>{noResults}</h1>
+            }
         </Fragment>
     )
 }

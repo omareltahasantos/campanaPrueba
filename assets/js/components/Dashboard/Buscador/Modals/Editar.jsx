@@ -18,7 +18,7 @@ export function Editar( {result, changeArrayEditar}) {
             </IconButton>
             
             
-            <Modal show={show} centered onHide={handleClose} size='lg' style={{top: '5%', left: '15%'}}>
+            <Modal show={show} centered onHide={handleClose} size='lg' style={{top: '5%', left: '30%'}}>
                 <Modal.Header >
                 <Modal.Title className='mx-auto'>Editar vivienda</Modal.Title>
                 </Modal.Header>

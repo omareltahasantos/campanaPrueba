@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import { Añadir } from '../Vivienda/Modals/Añadir'
-
 import axios from 'axios'
 import { Editar } from './Modals/Editar';
 import { makeStyles } from '@mui/styles';
@@ -91,6 +90,11 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
        };
        
   
+      //Añade una vivienda
+    //const getNewHousing = (newHousing) =>{ 
+      //setViviendas([...viviendas, newHousing])
+      //getUserData()
+    //}
       
 
     return (
@@ -109,9 +113,13 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
                     user.roles[0] === 'ROLE_ADMIN' ? (
                       <Fragment>
                         <CSVLink data={searchResult} filename={'ExportResultsSearch.csv'}><Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold'}} className='mb-3'>exportar</Button></CSVLink>
+                        <Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold'}} className='ml-2 mr-5 mb-3' onClick={handleShow}>Añadir vivienda</Button>
                       </Fragment>
                   ) : (
-                      ''
+                    <Fragment>
+                      <Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold'}} className='ml-2 mr-5' onClick={handleShow}>Añadir vivienda</Button>
+                      <Añadir show={show} setShow={setShow} handleClose={handleClose} handleShow={handleShow}></Añadir>
+                    </Fragment>
                   )
                   }
                 <TableContainer component={Paper}>
@@ -119,31 +127,13 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
                         <TableHead>
                         <TableRow>
                             <TableCell align='left'>Titular</TableCell>
-                            <TableCell align='left'>Contrato</TableCell>
                             <TableCell align='left'>Código postal</TableCell>
-                            <TableCell align='left'>Municipio</TableCell>
-                            <TableCell align='left'>Localidad</TableCell>
-                            <TableCell align='left'>Tipo de vía</TableCell>
-                            <TableCell align='left'>Nombre de vía</TableCell>
                             <TableCell align='left'>Nº portal</TableCell>
                             <TableCell align='left'>Bloque</TableCell>
                             <TableCell align='left'>Escalera</TableCell>
                             <TableCell align='left'>Piso</TableCell>
                             <TableCell align='left'>Puerta</TableCell>
-                            <TableCell align='left'>Observaciones dirección</TableCell>
-                            <TableCell align='left'>Telefono1</TableCell>
-                            <TableCell align='left'>Telefono2</TableCell>
-                            <TableCell align='left'>Telefono3</TableCell>
-                            <TableCell align='left'>Telefono4</TableCell>
-                            <TableCell align='left'>Complemento 1</TableCell>
-                            <TableCell align='left'>Complemento 2</TableCell>
-                            <TableCell align='left'>Uso de resíduos</TableCell>
-                            <TableCell align='left'>Campaña_anterior</TableCell>
-                            <TableCell align='left'>Campaña_actual</TableCell>
-                            <TableCell align='left'>Primera visita</TableCell>
-                            <TableCell align='left'>Segunda visita</TableCell>
                             <TableCell align='left'>Fecha visita</TableCell>
-                            <TableCell align='left'>Observaciones</TableCell>
                             <TableCell align="center">Acciones(g)</TableCell>
                         </TableRow>
                         </TableHead>
@@ -158,29 +148,12 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
                             <TableCell component="th" scope="row" style={hover} >
                                 {result.titular}
                             </TableCell>
-                            <TableCell align='left'>{result.contrato}</TableCell>
                             <TableCell align='left'>{result.cp}</TableCell>
-                            <TableCell align='left'>{result.municipio}</TableCell>
-                            <TableCell align='left'>{result.localidad}</TableCell>
-                            <TableCell align='left'>{result.tipo_via}</TableCell>
-                            <TableCell align='left'>{result.nombre_via}</TableCell>
                             <TableCell align='left'>{result.num_portal}</TableCell>
                             <TableCell align='left'>{result.bloque}</TableCell>
                             <TableCell align='left'>{result.escalera}</TableCell>
                             <TableCell align='left'>{result.piso}</TableCell>
                             <TableCell align='left'>{result.puerta}</TableCell>
-                            <TableCell align='left'>{result.observaciones_direccion}</TableCell>
-                            <TableCell align='left'>{result.telefono1}</TableCell>
-                            <TableCell align='left'>{result.telefono2}</TableCell>
-                            <TableCell align='left'>{result.telefono3}</TableCell>
-                            <TableCell align='left'>{result.telefono4}</TableCell>
-                            <TableCell align='left'>{result.complemento1}</TableCell>
-                            <TableCell align='left'>{result.complemento2}</TableCell>
-                            <TableCell align='left'>{result.uso_residuos}</TableCell>
-                            <TableCell align='left'>{result.campana_anterior}</TableCell>
-                            <TableCell align='left'>{result.campana_actual}</TableCell>
-                            <TableCell align='left'>{result.primera_visita}</TableCell>
-                            <TableCell align='left'>{result.segunda_visita}</TableCell>
                             {
                              result.fecha_visita ? (
                                  
@@ -190,8 +163,6 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
 
                              )
                             }
-                            
-                            <TableCell align='left'>{result.observaciones}</TableCell>
                             <TableCell align="center"><Editar result = {result} changeArrayEditar={changeArrayEditar}></Editar></TableCell>
                             </TableRow>
                         ))

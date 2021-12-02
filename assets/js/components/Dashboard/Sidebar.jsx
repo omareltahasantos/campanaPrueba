@@ -33,6 +33,7 @@ import { Account } from './Vivienda/Account';
 import { CSVLink, CSVDownload } from "react-csv";
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import {Search} from './Buscador/Search';
+import ResponsiveDrawer from '../Dashboard/ResponsiveDrawer'
 
 const useStyles = makeStyles({
   navbarColor: {
@@ -100,8 +101,9 @@ export function Sidebar({user, setUser}) {
     const [listItemPressed, setListItemPressed] = useState('Listado de las últimas viviendas')
 
     const [showUserList, setShowUserList] = useState(false)
-    const [showAccount, setShowAccount] = useState(true)
-    const [showBuscador, setShowBuscador] = useState(false)
+    const [showAccount, setShowAccount] = useState(false)
+    const [showBuscador, setShowBuscador] = useState(true)
+    
     const changeShowComponent = (component) => {
 
       if (component === 'Usuarios') {
@@ -187,48 +189,7 @@ export function Sidebar({user, setUser}) {
   return (
     <Box sx={{ display: 'flex' }} className={classes.backGrey}>
       <CssBaseline />
-      
-      <AppBar
-        position="fixed"
-        
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
-        <Toolbar className={classes.navbarColor}> 
-          <Typography variant="h6" noWrap component="div">
-            <Navbar></Navbar>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      > 
-      
-        <Toolbar><span><img src={logo} alt='logo'/></span></Toolbar>
-        
-        <Divider />
-      
-        <Divider />
-        <List >
-
-          {listItem.map((item, index) => (
-            <ListItem button key={index } onClick={() => changeShowComponent(item.text)}>
-              <ListItemIcon>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+      <ResponsiveDrawer/>
 
      
       <Box
@@ -237,7 +198,6 @@ export function Sidebar({user, setUser}) {
         className={classes.backGrey}
       >
         <Toolbar />
-
         {
           showUserList ? (
           <Fragment>

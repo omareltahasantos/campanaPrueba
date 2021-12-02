@@ -126,11 +126,11 @@ const getNewHousing = (newHousing) =>{
           <Fragment>
             <Box sx={{ flexGrow: 1 }} className='pb-3'>
               <Grid container spacing={2}>
-                <Grid item md={3}>
+                <Grid item md={6}>
                   <h4>{listItemPressed}</h4 >
                 </Grid>
                
-                <Grid item md={4} justify= "">
+                <Grid item md={6} justify= "">
                   <Box sx={{
                     display: 'flex',
                     justifyContent: 'flex-end'

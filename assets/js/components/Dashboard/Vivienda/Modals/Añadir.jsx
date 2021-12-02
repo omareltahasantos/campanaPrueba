@@ -17,7 +17,7 @@ export function Añadir({show, setShow, handleClose, handleShow, getNewHousing})
                 <Modal.Title className='mx-auto'>Añadir vivienda</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                   <FormAñadir handleClose={handleClose} getNewHousing={getNewHousing}></FormAñadir>
+                   <FormAñadir handleClose={handleClose}></FormAñadir>
                 </Modal.Body>
                 <Modal.Footer>
                 </Modal.Footer>

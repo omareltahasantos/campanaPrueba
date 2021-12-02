@@ -38,31 +38,13 @@ export function UserDataList({viviendas, changeArrayEditar}) {
         <TableHead>
           <TableRow>
             <TableCell align='left'>Titular</TableCell>
-            <TableCell align='left'>Contrato</TableCell>
             <TableCell align='left'>Código postal</TableCell>
-            <TableCell align='left'>Municipio</TableCell>
-            <TableCell align='left'>Localidad</TableCell>
-            <TableCell align='left'>Tipo de vía</TableCell>
-            <TableCell align='left'>Nombre de vía</TableCell>
             <TableCell align='left'>Nº portal</TableCell>
             <TableCell align='left'>Bloque</TableCell>
             <TableCell align='left'>Escalera</TableCell>
             <TableCell align='left'>Piso</TableCell>
             <TableCell align='left'>Puerta</TableCell>
-            <TableCell align='left'>Observaciones dirección</TableCell>
-            <TableCell align='left'>Telefono1</TableCell>
-            <TableCell align='left'>Telefono2</TableCell>
-            <TableCell align='left'>Telefono3</TableCell>
-            <TableCell align='left'>Telefono4</TableCell>
-            <TableCell align='left'>Complemento 1</TableCell>
-            <TableCell align='left'>Complemento 2</TableCell>
-            <TableCell align='left'>Uso de resíduos</TableCell>
-            <TableCell align='left'>Campaña_anterior</TableCell>
-            <TableCell align='left'>Campaña_actual</TableCell>
-            <TableCell align='left'>Primera visita</TableCell>
-            <TableCell align='left'>Segunda visita</TableCell>
             <TableCell align='left'>Fecha visita</TableCell>
-            <TableCell align='left'>Observaciones</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -74,31 +56,13 @@ export function UserDataList({viviendas, changeArrayEditar}) {
               hover classes={{hover: classes.hover}}
             >
               <TableCell align='left'>{vivienda.titular}</TableCell>
-              <TableCell align='left'>{vivienda.contrato}</TableCell>
               <TableCell align='left'>{vivienda.cp}</TableCell>
-              <TableCell align='left'>{vivienda.municipio}</TableCell>
-              <TableCell align='left'>{vivienda.localidad}</TableCell>
-              <TableCell align='left'>{vivienda.tipo_via}</TableCell>
-              <TableCell align='left'>{vivienda.nombre_via}</TableCell>
               <TableCell align='left'>{vivienda.num_portal}</TableCell>
               <TableCell align='left'>{vivienda.bloque}</TableCell>
               <TableCell align='left'>{vivienda.escalera}</TableCell>
               <TableCell align='left'>{vivienda.piso}</TableCell>
               <TableCell align='left'>{vivienda.puerta}</TableCell>
-              <TableCell align='left'>{vivienda.observaciones_direccion}</TableCell>
-              <TableCell align='left'>{vivienda.telefono1}</TableCell>
-              <TableCell align='left'>{vivienda.telefono2}</TableCell>
-              <TableCell align='left'>{vivienda.telefono3}</TableCell>
-              <TableCell align='left'>{vivienda.telefono4}</TableCell>
-              <TableCell align='left'>{vivienda.complemento1}</TableCell>
-              <TableCell align='left'>{vivienda.complemento2}</TableCell>
-              <TableCell align='left'>{vivienda.uso_residuos}</TableCell>
-              <TableCell align='left'>{vivienda.campaña_anterior}</TableCell>
-              <TableCell align='left'>{vivienda.campaña_actual}</TableCell>
-              <TableCell align='left'>{vivienda.primera_visita}</TableCell>
-              <TableCell align='left'>{vivienda.segunda_visita}</TableCell>
               <TableCell align='left'>{vivienda.fecha_visita}</TableCell>
-              <TableCell align='left'>{vivienda.observaciones}</TableCell>
             </TableRow>
           ))
         }

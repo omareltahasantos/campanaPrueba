@@ -94,7 +94,9 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                
         if (response.data.error === 'null') {
             //Recibir json con todos los usuarios que tiene la tabla
-            getNewHousing(response.data)
+            //Deberá salir un snackbar conforme se ha añadido una nueva vivienda
+
+            //getNewHousing(response.data)
             handleClose();
         }else{
 
