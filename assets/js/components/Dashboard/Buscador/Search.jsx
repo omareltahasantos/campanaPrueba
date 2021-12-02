@@ -392,7 +392,7 @@ export function Search({user, listItemPressed}) {
                     >
                         <Grid container spacing={2}>
                             <Grid item lg={12} xs={12}>
-                                <h3 style={{textAlign: 'center'}}>{listItemPressed}</h3>
+                                <h3 style={{textAlign: 'center'}}>Buscador</h3>
                             </Grid>
                         </Grid>
                         <ThemeProvider theme={theme}>
