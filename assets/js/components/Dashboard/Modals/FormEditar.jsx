@@ -32,7 +32,7 @@ export  function FormEditar({user, handleClose, changeArrayEditar}) {
             }
           })
           .then(function (response) {
-           
+        
             if (response.data.error === 'null') {
                               
                 changeArrayEditar(response.data)
