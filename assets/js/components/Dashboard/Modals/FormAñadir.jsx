@@ -10,7 +10,7 @@ export  function FormAñadir({handleClose, getUsers}) {
     const getDataList = () =>{
 
     
-        axios.get('http://campana-organicax.herokuapp.com/api/UsersList', {
+        axios.get('https://campana-organicax.herokuapp.com/api/UsersList', {
     
           })
           .then(function (response) {
@@ -57,7 +57,7 @@ export  function FormAñadir({handleClose, getUsers}) {
         const emailConverted = JSON.stringify(userParams.email)
         const passwordConverted = JSON.stringify(userParams.password)
 
-        axios.get('http://campana-organicax.herokuapp.com/api/newUser', {
+        axios.get('https://campana-organicax.herokuapp.com/api/newUser', {
         params: {
           email: emailConverted,
           password: passwordConverted

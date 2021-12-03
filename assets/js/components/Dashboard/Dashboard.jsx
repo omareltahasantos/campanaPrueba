@@ -6,7 +6,6 @@ import { Route } from 'react-router';
 import { useHistory } from "react-router-dom";
 import {browserHistory} from "react-router";
 import { GetDataUser } from '../GetDataUser';
-import {Navbar} from './Navbar';
 import {Sidebar} from './Sidebar'
 export function Dashboard() {
     

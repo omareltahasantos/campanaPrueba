@@ -19,7 +19,7 @@ import { grey } from '@mui/material/colors';
 import '../../../../styles/app.css'
 import { SendAndArchiveOutlined } from '@mui/icons-material';
 import { SearchTable } from './SearchTable';
-
+import BasicTable from './BasicTable';
 
 
 
@@ -80,6 +80,7 @@ export function Search({user, listItemPressed}) {
     const [piso, setPiso] = useState('')
     const [puerta, setPuerta] = useState('')
     const [municipio, setMunicipio] = useState('')
+    const [clearInput, setClearInput] = useState(false)
     const [searchResult, setSearchResult] = useState([])
     const [displayTable, setDisplayTable] = useState(false)
     const [noResults, setNoResults] = useState('')
@@ -210,6 +211,22 @@ export function Search({user, listItemPressed}) {
           })
 
 
+     }
+     const getAllRecords = () => {
+
+        axios.get('https://campana-organicax.herokuapp.com/api/vivienda')
+          .then(function (response) {
+                   
+            if (response.data) {
+
+                setViviendas(response.data)
+          
+            }
+           
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
      }
 
      ///Funciones para la paginacion///
@@ -367,6 +384,21 @@ export function Search({user, listItemPressed}) {
         
       }
   
+      const LimpiarFiltro = () => {
+
+        setUsoResiduos('')
+        setTipoVia('')
+        setLocalidades('')
+        setCampañaAnterior('')
+        setContrato('')
+        setNumPortal('')
+        setBloque('')
+        setEscalera('')
+        setPiso('')
+        setPuerta('')
+        setMunicipio('')
+        setClearInput(0)
+      }
   
   
     //Efectos al cargar página
@@ -374,13 +406,16 @@ export function Search({user, listItemPressed}) {
     useEffect(() => {
        
         getNombreVias()
+        getAllRecords()
     }, [])
+
+
 
 
     return (
         <Fragment>
             <Grid container spacing={2}>
-                <Grid item md={12}>
+                <Grid item md={12} sm={12} xs={12}>
                     <Box
                         style={{marginLeft: '0px', marginRight: '0px', marginBottom: '3px'}}
                         sx={{
@@ -407,6 +442,7 @@ export function Search({user, listItemPressed}) {
                                                 select
                                                 fullWidth
                                                 label= 'Uso de resíduos'
+                                                value={usoResiduos}
                                                 onChange={(e) => setUsoResiduos(e.target.value)}
                                             >
                                                 {uso_residuos.map((res) => (
@@ -424,6 +460,7 @@ export function Search({user, listItemPressed}) {
                                                 select
                                                 fullWidth
                                                 label= 'Tipo de Vía'
+                                                value={tipoVia}
                                                 onChange={(e) => setTipoVia(e.target.value)}
                                                 >
                                                 {TipoVia.map((via) => (
@@ -441,6 +478,7 @@ export function Search({user, listItemPressed}) {
                                                 select
                                                 fullWidth
                                                 label= 'Localidades'
+                                                value={localidades}
                                                 onChange={(e) => setLocalidades(e.target.value)}
                                             >
                                                 {Localidades.map((localidad) => (
@@ -458,6 +496,7 @@ export function Search({user, listItemPressed}) {
                                                 select
                                                 fullWidth
                                                 label= 'Campaña anterior'
+                                                value={campañaAnterior}
                                                 onChange={(e) => setCampañaAnterior(e.target.value)}
                                             >
                                                 {CampañaAnterior.map((campAnt) => (
@@ -476,7 +515,6 @@ export function Search({user, listItemPressed}) {
                                             onSelect={onSelect}
                                             requiredInputLength = {1}
                                             inputClassName={classes.inputDataList}
-
                                             />
                                         </Grid>
                                         <Grid item md={3} sm={6} xs={12}>
@@ -492,6 +530,7 @@ export function Search({user, listItemPressed}) {
                                             type="number"
                                             autoComplete="Contrato"
                                             autoFocus
+                                            value={contrato}
                                             onChange={ (e) => setContrato(e.target.value)}
                                         />
                                         </Grid>
@@ -508,6 +547,7 @@ export function Search({user, listItemPressed}) {
                                                 type="text"
                                                 autoComplete="Nº Portal"
                                                 autoFocus
+                                                value={numPortal}
                                                 onChange={ (e) => setNumPortal(e.target.value)}
                                             />
                                         </Grid>
@@ -524,6 +564,7 @@ export function Search({user, listItemPressed}) {
                                                 type="number"
                                                 autoComplete="Bloque"
                                                 autoFocus
+                                                value={bloque}
                                                 onChange={ (e) => setBloque(e.target.value)}
                                             />
                                         </Grid>
@@ -542,6 +583,7 @@ export function Search({user, listItemPressed}) {
                                                 type="text"
                                                 autoComplete="Escalera"
                                                 autoFocus
+                                                value={escalera}
                                                 onChange={ (e) => setEscalera(e.target.value)}
                                             />
                                         </Grid>
@@ -558,6 +600,7 @@ export function Search({user, listItemPressed}) {
                                                 type="text"
                                                 autoComplete="Piso"
                                                 autoFocus
+                                                value={piso}
                                                 onChange={ (e) => setPiso(e.target.value)}
                                             />
                                         </Grid>
@@ -574,6 +617,7 @@ export function Search({user, listItemPressed}) {
                                                 type="text"
                                                 autoComplete="Puerta"
                                                 autoFocus
+                                                value={puerta}
                                                 onChange={ (e) => setPuerta(e.target.value)}
                                             />
                                         </Grid>
@@ -590,19 +634,38 @@ export function Search({user, listItemPressed}) {
                                                 type="text"
                                                 autoComplete="Municipio"
                                                 autoFocus
+                                                value={municipio}
                                                 onChange={ (e) => setMunicipio(e.target.value)}
                                             />
                                         </Grid>
                                     </Grid>
                                     <Grid container spacing={2}>
-                                        <Grid item md={12} sm={6} xs={12}>
+                                        <Grid item md={4} sm={4} xs={4}>
+                                        {
+                                            user.roles[0] === 'ROLE_ADMIN' ? (
+                                             <Fragment>
+                                                <CSVLink data={viviendas} filename={'ExportViviendas.csv'}><Button variant="contained" size='medium' style={{background: '#522F10'}}  sx={{ mt: 4, mb: 3, ml: 0 }}>exportar</Button></CSVLink>
+                                              </Fragment>) : ('')
+                                        }
+                                        </Grid>
+                                        <Grid item md={4} sm={4} xs={4}>
                                             <Button
                                                 type="submit"
                                                 color="brown"
                                                 variant="contained"
-                                                sx={{ mt: 4, mb: 3, }}
+                                                sx={{ mt: 4, mb: 3, ml: 1 }}
                                             >
                                                 Buscar
+                                            </Button>
+                                        </Grid>
+                                        <Grid item md={4} sm={4} xs={4}>
+                                            <Button
+                                                color="brown"
+                                                variant="contained"
+                                                sx={{ mt: 4, mb: 3, }}
+                                                onClick={LimpiarFiltro}
+                                            >
+                                                Limpiar
                                             </Button>
                                         </Grid>
                                     </Grid>
@@ -613,7 +676,7 @@ export function Search({user, listItemPressed}) {
 
                     </Box>
                 </Grid>
-            </Grid>                               
+            </Grid>    
             {
                 displayTable ? (
                     <Fragment>

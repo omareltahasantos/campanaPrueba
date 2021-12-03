@@ -111,53 +111,61 @@ export  function FormAñadir({handleClose, getNewHousing}) {
       })
     }
     return (
-        <Fragment>
-          <ThemeProvider theme={theme}>
-            <div className='container text-center'>
-            <Box component="form" onSubmit={añadirVivienda} noValidate sx={{ mt: 1 }}>
-              <Grid container spacing={2}>
-                <Grid item md={3}>
-                  <TextField
-                    size="small"
-                    color='brown'
-                    margin="normal"
-                    required
-                    id="titular"
-                    label="Titular"
-                    name="titular"
-                    type="text"
-                    autoComplete="titular"
-                    autoFocus
-                    onChange={ (e) => setTitular(e.target.value) }
-                  />
-                  <TextField
-                    size="small"
-                    color='brown'
-                    margin="normal"
-                    required
-                    id="contrato"
-                    label="Contrato"
-                    name="contrato"
-                    type="number"
-                    autoComplete="contrato"
-                    autoFocus
-                    
-                    onChange={ (e) => setContrato(e.target.value) }
-                  />
-                  <TextField
-                    size="small"
-                    color='brown'
-                    margin="normal"
-                    required
-                    id="cp"
-                    label="Código postal"
-                    name="cp"
-                    type="number"
-                    autoComplete="cp"
-                    autoFocus
-                    onChange={ (e) => setCp(e.target.value) }
-                  />
-                  <TextField
+      <Fragment>
+      <ThemeProvider theme={theme}>
+          <div className='container text-center'>
+          <Box component="form" onSubmit={añadirVivienda} noValidate sx={{ mt: 1 }}>
+            <Grid container spacing={2}>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
+                  size="small"
+                  color='brown'
+                  margin="normal"
+                  required
+                  id="titular"
+                  label="Titular"
+                  name="titular"
+                  type="text"
+                  autoComplete="titular"
+                  autoFocus
+                  value={titular}
+                  onChange={ (e) => setTitular(e.target.value) }
+                />
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
+                  size="small"
+                  color='brown'
+                  margin="normal"
+                  required
+                  id="contrato"
+                  label="Contrato"
+                  name="contrato"
+                  type="number"
+                  autoComplete="contrato"
+                  autoFocus
+                  value={contrato}
+                  onChange={ (e) => setContrato(e.target.value) }
+                />
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+              <TextField
+                  size="small"
+                  color='brown'
+                  margin="normal"
+                  required
+                  id="cp"
+                  label="Código postal"
+                  name="cp"
+                  type="number"
+                  autoComplete="cp"
+                  autoFocus
+                  value={cp}
+                  onChange={ (e) => setCp(e.target.value) }
+                />
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -168,9 +176,14 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="municipio"
                     autoFocus
+                    value={municipio}
                     onChange={ (e) => setMunicipio(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -181,9 +194,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="localidad"
                     autoFocus
+                    value={localidad}
                     onChange={ (e) => setLocalidad(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={6} xs={6}>
+                <TextField
                   size='small'
                   color="brown"
                   margin="normal"
@@ -199,10 +215,9 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     </MenuItem>
                   ))}
                 </TextField>
-                </Grid>
-                <Grid item md={3} className=''>
-                
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color="brown"
                     margin="normal"
@@ -212,9 +227,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     id="nombreVia"
                     autoComplete="nombreVia"
+                    value={nombreVia}
                     onChange={ (e) => setNombreVia(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -225,9 +243,14 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="numPortal"
                     autoFocus
+                    value={numPortal}
                     onChange={ (e) => setNumPortal(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -238,9 +261,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="number"
                     autoComplete="bloque"
                     autoFocus
+                    value={bloque}
                     onChange={ (e) => setBloque(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -251,9 +277,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="escalera"
                     autoFocus
+                    value={escalera}
                     onChange={ (e) => setEscalera(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -264,9 +293,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="piso"
                     autoFocus
+                    value={piso}
                     onChange={ (e) => setPiso(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -277,9 +309,14 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="puerta"
                     autoFocus
+                    value={puerta}
                     onChange={ (e) => setPuerta(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -290,11 +327,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="obsdireccion"
                     autoFocus
+                    value={obserDireccion}
                     onChange={ (e) => setObserDireccion(e.target.value) }
-                  />
-                </Grid>
-                <Grid item md={3}>
-                  <TextField
+                />
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -305,9 +343,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="telefono1"
                     autoFocus
+                    value={telefono1}
                     onChange={ (e) => setTel1(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -318,9 +359,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="tel2"
                     autoFocus
+                    value={telefono2}
                     onChange={ (e) => setTel2(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -331,9 +375,14 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="tel3"
                     autoFocus
+                    value={telefono3}
                     onChange={ (e) => setTel3(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -344,9 +393,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="tel4"
                     autoFocus
+                    value={telefono4}
                     onChange={ (e) => setTel4(e.target.value) }
                   />
-                  <TextField
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -357,40 +409,49 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="complemento1"
                     autoFocus
+                    value={complemento1}
                     onChange={ (e) => setComplemento1(e.target.value) }
                   />
-                  <TextField
-                    size="small"
-                    color='brown'
-                    margin="normal"
-                    required
-                    id="complemento2"
-                    label="Complemento 2"
-                    name="complemento2"
-                    type="text"
-                    autoComplete="complemento2"
-                    autoFocus
-                    onChange={ (e) => setComplemento2(e.target.value) }
-                  />
-                </Grid>
-                <Grid item md={3}>
-                <TextField
-                  size='small'
-                  color="brown"
+              </Grid>
+              <Grid item md={3} sm={12} xs={12}>
+              <TextField
+                  size="small"
+                  color='brown'
                   margin="normal"
-                  select
-                  fullWidth
-                  label= 'Campaña anterior'
-                  value={campañaAnterior}
-                  onChange={(e) => setCampañaAnterior(e.target.value)}
-                >
-                  {CampañaAnterior.map((prevCamp) => (
-                    <MenuItem key={prevCamp.value} value={prevCamp.value}>
-                      {prevCamp.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
+                  required
+                  id="complemento2"
+                  label="Complemento 2"
+                  name="complemento2"
+                  type="text"
+                  autoComplete="complemento2"
+                  autoFocus
+                  value={complemento2}
+                  onChange={ (e) => setComplemento2(e.target.value) }
+                />
+              </Grid>
+              <Grid item md={3} sm={6} xs={6}>
                   <TextField
+                    size='small'
+                    color="brown"
+                    margin="normal"
+                    select
+                    fullWidth
+                    label= 'Campaña anterior'
+                    value={campañaAnterior}
+                    onChange={(e) => setCampañaAnterior(e.target.value)}
+              >
+                {CampañaAnterior.map((prevCamp) => (
+                  <MenuItem key={prevCamp.value} value={prevCamp.value}>
+                    {prevCamp.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+                 
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={6} xs={6}>
+                <TextField
                     size='small'
                     color="brown"
                     margin="normal"
@@ -406,7 +467,11 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                       </MenuItem>
                     ))}
                   </TextField>
-                  <TextField
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={6} xs={6}>
+                <TextField
                   size='small'
                   color="brown"
                   margin="normal"
@@ -422,39 +487,51 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     </MenuItem>
                   ))}
                 </TextField>
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={6} xs={6}>
+                <TextField
+                  size='small'
+                  color="brown"
+                  margin="normal"
+                  select
+                  fullWidth
+                  label= 'Primera visita'
+                  value={primeraVisita}
+                  onChange={(e) => setPrimeraVisita(e.target.value)}
+                >
+                  {PrimeraVisita.map((primeraVisita) => (
+                    <MenuItem key={primeraVisita.value} value={primeraVisita.value}>
+                      {primeraVisita.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={6} xs={6}>
                   <TextField
-                      size='small'
-                      color="brown"
-                      margin="normal"
-                      select
-                      fullWidth
-                      label= 'Primera visita'
-                      value={primeraVisita}
-                      onChange={(e) => setPrimeraVisita(e.target.value)}
-                    >
-                      {PrimeraVisita.map((primeraVisita) => (
-                        <MenuItem key={primeraVisita.value} value={primeraVisita.value}>
-                          {primeraVisita.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      size='small'
-                      color="brown"
-                      margin="normal"
-                      select
-                      fullWidth
-                      label= 'Segunda visita'
-                      value={segundaVisita}
-                      onChange={(e) => setSegundaVisita(e.target.value)}
-                    >
-                      {SegundaVisita.map((segundaVisita) => (
-                        <MenuItem key={segundaVisita.value} value={segundaVisita.value}>
-                          {segundaVisita.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  <TextField
+                    size='small'
+                    color="brown"
+                    margin="normal"
+                    select
+                    fullWidth
+                    label= 'Segunda visita'
+                    value={segundaVisita}
+                    onChange={(e) => setSegundaVisita(e.target.value)}
+                  >
+                    {SegundaVisita.map((segundaVisita) => (
+                      <MenuItem key={segundaVisita.value} value={segundaVisita.value}>
+                        {segundaVisita.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={12} sm={12} xs={12}>
+                <TextField
                     size="small"
                     color='brown'
                     margin="normal"
@@ -465,11 +542,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                     type="text"
                     autoComplete="observaciones"
                     autoFocus
+                    value={observaciones}
                     onChange={ (e) => setObservaciones(e.target.value) }
                   />
-                </Grid>
               </Grid>
-              <Button
+              <Grid item md={3} sm={12} xs={12} >
+                <Button
                 color="brown"
                 type="submit"
                 fullWidth
@@ -477,10 +555,12 @@ export  function FormAñadir({handleClose, getNewHousing}) {
                 sx={{ mt: 3, mb: 2 }}
               >
                 Añadir vivienda
-              </Button>
-          </Box>
-          </div>
-        </ThemeProvider>
-        </Fragment>
+              </Button> 
+              </Grid>
+            </Grid>        
+        </Box>
+        </div>
+      </ThemeProvider>
+      </Fragment>
     )
 }

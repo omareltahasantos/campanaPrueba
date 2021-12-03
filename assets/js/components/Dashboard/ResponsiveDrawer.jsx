@@ -20,7 +20,7 @@ import logo from '../../../images/Logo_Consorcio_Residuos_Navarra.png'
 import HouseSharpIcon from '@mui/icons-material/HouseSharp';
 import { ListItemSidebar } from './ListItemSidebar';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
-
+import { Logout } from './Logout';
 
 const drawerWidth = 240;
 
@@ -87,61 +87,18 @@ function ResponsiveDrawer(props) {
       <AppBar
         position="fixed"
         sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: `calc(100%)` },
           ml: { sm: `${drawerWidth}px` },
         }}
         style={{backgroundColor: '#522F10'}}
       >
         
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Panel de administración
+            <Logout/>
           </Typography>
         </Toolbar>
       </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          <Toolbar><span><img src={logo} alt='logo'/></span></Toolbar>
-          {drawer}
-          
-        </Drawer>
-      </Box>
 
     </Box>
   );

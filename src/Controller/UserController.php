@@ -24,6 +24,62 @@ class UserController extends AbstractController
         ]);
     }
     /**
+     * @Route("/api/getAllRecords", name="getAllRecords")
+     */
+    public function getAllRecords(){
+        /*
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery('SELECT v FROM App\Entity\Vivienda v');
+        
+        $arrayResponse =[];
+        
+
+
+        if ($viviendas = $query->getResult()) {
+            foreach ($viviendas as $vivienda) {
+
+               array_push($arrayResponse, array(
+                    'id' => $vivienda->getId(),
+                    'contrato' => $vivienda->getContrato(),
+                    'titular' => $vivienda->getTitular(),
+                    'cp' => $vivienda->getCp(),
+                    'municipio' => $vivienda->getMunicipio(),
+                    'localidad' => $vivienda->getLocalidad(),
+                    'tipo_via' => $vivienda->getTipoVia(),
+                    'nombre_via' => $vivienda->getNombreVia(),
+                    'num_portal' => $vivienda->getNumPortal(),
+                    'bloque' => $vivienda->getBloque(),
+                    'escalera' => $vivienda->getEscalera(),
+                    'piso' => $vivienda->getPiso(),
+                    'puerta' => $vivienda->getPuerta(),
+                    'observaciones_direccion' => $vivienda->getObservacionesDireccion(),
+                    'telefono1' => $vivienda->getTelefono1(),
+                    'telefono2' => $vivienda->getTelefono2(),
+                    'telefono3' => $vivienda->getTelefono3(),
+                    'telefono4' => $vivienda->getTelefono4(),
+                    'complemento1' => $vivienda->getComplemento1(),
+                    'complemento2' => $vivienda->getComplemento2(),
+                    'uso_residuos' => $vivienda->getUsoResiduos(),
+                    'campaña_anterior' => $vivienda->getCampañaAnterior(),
+                    'campaña_actual' => $vivienda->getCampañaActual(),
+                    'primera_visita' => $vivienda->getPrimeraVisita(),
+                    'segunda_visita' => $vivienda->getSegundaVisita(),
+                    'fecha_visita' =>  $vivienda->getFechaVisita(),
+                    'observaciones' => $vivienda->getObservaciones(),
+                ));
+
+                
+
+
+    
+            }
+*/
+            return new Response('He hecho la conexion');
+
+        //}
+    }
+
+    /**
      * @Route("/api/newUser", name="new_user")
      */
 
@@ -221,7 +277,7 @@ class UserController extends AbstractController
         //echo "Formato: $formato; " . $fecha->format('Y-m-d H:i:s') . "\n";
 
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery('SELECT v FROM App\Entity\Vivienda v ORDER BY v.id DESC')->setMaxResults(10);
+        $query = $em->createQuery('SELECT v FROM App\Entity\Vivienda v');
         
         $arrayResponse =[];
         
@@ -953,6 +1009,7 @@ class UserController extends AbstractController
 
      }
 
+ 
 
     }
 

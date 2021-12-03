@@ -24,7 +24,7 @@ export  function FormEditar({user, handleClose, changeArrayEditar}) {
         }
          
 
-        axios.get('http://campana-organicax.herokuapp.com/api/updateUser', {
+        axios.get('https://campana-organicax.herokuapp.com/api/updateUser', {
             params: {
               email: JSON.stringify(userParams.email),
               password: JSON.stringify(userParams.password),

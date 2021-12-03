@@ -12,7 +12,7 @@ export function Añadir({show, setShow, handleClose, handleShow, getNewHousing})
     return (
         <Fragment>
             
-            <Modal show={show} centered onHide={handleClose} style={{top: '5%', left: '15%'}} size='lg'>
+            <Modal show={show} centered onHide={handleClose} style={{top: '5%', left: '5%'}} size='lg'>
                 <Modal.Header >
                 <Modal.Title className='mx-auto'>Añadir vivienda</Modal.Title>
                 </Modal.Header>

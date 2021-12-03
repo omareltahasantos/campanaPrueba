@@ -13,7 +13,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Navbar } from './Navbar';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GroupIcon from '@mui/icons-material/Group';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -33,7 +32,7 @@ import { Account } from './Vivienda/Account';
 import { CSVLink, CSVDownload } from "react-csv";
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import {Search} from './Buscador/Search';
-import ResponsiveDrawer from '../Dashboard/ResponsiveDrawer'
+import ResponsiveDrawer from './ResponsiveDrawer'
 
 const useStyles = makeStyles({
   navbarColor: {
@@ -190,8 +189,6 @@ export function Sidebar({user, setUser}) {
     <Box sx={{ display: 'flex' }} className={classes.backGrey}>
       <CssBaseline />
       <ResponsiveDrawer/>
-
-     
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3 }}
