@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import Box from '@mui/material/Box';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Button } from '@mui/material';
-
+import Logo from '../../../images/Logo_Mancomunidad de Mairaga.png'
 
 const DestroySession = () => {
 
@@ -14,18 +14,19 @@ const DestroySession = () => {
 export function Logout() {
     return (
         <Fragment>
-            <Box sx={{ flexGrow: 1}}>
-                <Grid container spacing={12}>
-                    <Grid item md={6} sm={6} xs={8} >
-                        <h5 className='pt-2'>Panel de administración</h5>
-                    </Grid>
-                    <Grid item md={1} sm={6} xs={3}>
-                        <Button style={{color: 'white'}} onClick={DestroySession}>
-                            <LogoutIcon></LogoutIcon>
-                        </Button>
-                    </Grid>
+                <Grid 
+                    container
+                    spacing={{xs:30, md:140}}
+                    >
+                        <Grid item md={6} xs={3}>
+                            <img src={Logo} style={{width: '70px'}}/>
+                        </Grid>
+                        <Grid item md={6} xs={6}>
+                            <Button style={{color: 'white'}} onClick={DestroySession}>
+                                <LogoutIcon></LogoutIcon>
+                            </Button>
+                        </Grid>
                 </Grid>
-            </Box>
         </Fragment>
     )
 }

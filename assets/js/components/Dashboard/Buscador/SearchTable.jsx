@@ -116,6 +116,7 @@ export function SearchTable({searchResult, changeArrayEditar, countResults, next
                       user.roles[0] === 'ROLE_ADMIN' ? (
                         <Fragment>
                           <Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold'}} className='ml-2 mr-5 mb-3' onClick={handleShow}>Añadir vivienda</Button>
+                          <Añadir show={show} setShow={setShow} handleClose={handleClose} handleShow={handleShow}></Añadir>
                         </Fragment>
                     ) : (
                       <Fragment>

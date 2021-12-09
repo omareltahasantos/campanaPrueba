@@ -33,7 +33,7 @@ import { CSVLink, CSVDownload } from "react-csv";
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import {Search} from './Buscador/Search';
 import ResponsiveDrawer from './ResponsiveDrawer'
-
+import { ExportToExcel } from './ExportToExcell';
 const useStyles = makeStyles({
   navbarColor: {
     background: '#522F10',
@@ -209,6 +209,7 @@ export function Sidebar({user, setUser}) {
                   {
                     user.roles[0] === 'ROLE_ADMIN' ? (
                       <Fragment>
+                        <ExportToExcel apiData={usersState} fileName={'Tabla-users.csv'} />
                         <CSVLink data={usersState} filename={'Tabla-users.csv'}><Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold', justifyContent: 'flex-end'}} className='ml-3'>exportar</Button></CSVLink>
                         <Button variant="contained" size='medium' style={{background: '#522F10', fontWeight: 'bold'}} className='ml-2' onClick={handleShow}>Añadir usuario</Button>
                       </Fragment>

@@ -20,7 +20,7 @@ import '../../../../styles/app.css'
 import { SendAndArchiveOutlined } from '@mui/icons-material';
 import { SearchTable } from './SearchTable';
 import BasicTable from './BasicTable';
-
+import { ExportToExcel } from '../ExportToExcell';
 
 
 
@@ -644,7 +644,7 @@ export function Search({user, listItemPressed}) {
                                         {
                                             user.roles[0] === 'ROLE_ADMIN' ? (
                                              <Fragment>
-                                                <CSVLink data={viviendas} filename={'ExportViviendas.csv'}><Button variant="contained" size='medium' style={{background: '#522F10'}}  sx={{ mt: 4, mb: 3, ml: 0 }}>exportar</Button></CSVLink>
+                                                <ExportToExcel apiData={viviendas} fileName={'ExportViviendas'} />
                                               </Fragment>) : ('')
                                         }
                                         </Grid>

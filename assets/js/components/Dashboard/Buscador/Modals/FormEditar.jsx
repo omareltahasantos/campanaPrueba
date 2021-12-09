@@ -146,6 +146,131 @@ export function FormEditar({result, handleClose, changeArrayEditar}) {
         <ThemeProvider theme={theme}>
             <div className='container text-center'>
             <Box component="form" onSubmit={editarVivienda} noValidate sx={{ mt: 1 }}>
+              <Grid container spacing={2} alignItems="center" justifyContent="center">
+              <Grid item md={3} sm={9} xs={9}>
+                {
+                   user.roles[0] === 'ROLE_ADMIN' ? 
+                   (
+                    <TextField
+                      size='small'
+                      color="brown"
+                      margin="normal"
+                      select
+                      fullWidth
+                      label= 'Campaña anterior'
+                      value={campañaAnterior}
+                      onChange={(e) => setCampañaAnterior(e.target.value)}
+                >
+                  {CampañaAnterior.map((prevCamp) => (
+                    <MenuItem key={prevCamp.value} value={prevCamp.value}>
+                      {prevCamp.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+                   ) : (
+                    <TextField
+                    size='small'
+                    color="brown"
+                    margin="normal"
+                    select
+                    fullWidth
+                    label= 'Campaña anterior'
+                    value={campañaAnterior}
+                    onChange={(e) => setCampañaAnterior(e.target.value)}
+                    inputProps={
+                      { readOnly: true, }
+                    }
+                  >
+                    {CampañaAnterior.map((prevCamp) => (
+                      <MenuItem key={prevCamp.value} value={prevCamp.value}>
+                        {prevCamp.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                   )
+                }
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="center" justifyContent="center">
+                <Grid item md={3} sm={9} xs={9}>
+                  <TextField
+                    size='small'
+                    color="brown"
+                    margin="normal"
+                    select
+                    fullWidth
+                    label= 'Primera visita'
+                    value={primeraVisita}
+                    onChange={(e) => setPrimeraVisita(e.target.value)}
+                  >
+                    {PrimeraVisita.map((primeraVisita) => (
+                      <MenuItem key={primeraVisita.value} value={primeraVisita.value}>
+                        {primeraVisita.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="center" justifyContent="center">
+                <Grid item md={3} sm={9} xs={9}>
+                  <TextField
+                      size='small'
+                      color="brown"
+                      margin="normal"
+                      select
+                      fullWidth
+                      label= 'Campaña actual'
+                      value={campañaActual}
+                      onChange={(e) => setCampañaActual(e.target.value)}
+                    >
+                      {CampañaActual.map((thisCamp) => (
+                        <MenuItem key={thisCamp.value} value={thisCamp.value}>
+                          {thisCamp.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="center" justifyContent="center">
+                <Grid item md={3} sm={9} xs={9}>
+                    <TextField
+                      size='small'
+                      color="brown"
+                      margin="normal"
+                      select
+                      fullWidth
+                      label= 'Segunda visita'
+                      value={segundaVisita}
+                      onChange={(e) => setSegundaVisita(e.target.value)}
+                    >
+                      {SegundaVisita.map((segundaVisita) => (
+                        <MenuItem key={segundaVisita.value} value={segundaVisita.value}>
+                          {segundaVisita.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="center" justifyContent="center">
+                <Grid item md={3} sm={9} xs={9}>
+                  <TextField
+                    size='small'
+                    color="brown"
+                    margin="normal"
+                    select
+                    fullWidth
+                    label= 'Uso de resíduos'
+                    value={usoResiduos}
+                    onChange={(e) => setUsoResiduos(e.target.value)}
+                  >
+                    {UsoResiduos.map((res) => (
+                      <MenuItem key={res.value} value={res.value}>
+                        {res.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+              </Grid>
               <Grid container spacing={2}>
                 <Grid item md={3} sm={12} xs={12}>
                   <TextField
@@ -229,7 +354,7 @@ export function FormEditar({result, handleClose, changeArrayEditar}) {
                       onChange={ (e) => setLocalidad(e.target.value) }
                     />
                 </Grid>
-                <Grid item md={3} sm={6} xs={6}>
+                <Grid item md={3} sm={9} xs={9}>
                   <TextField
                     size='small'
                     color="brown"
@@ -460,129 +585,6 @@ export function FormEditar({result, handleClose, changeArrayEditar}) {
                     onChange={ (e) => setComplemento2(e.target.value) }
                   />
                 </Grid>
-                <Grid item md={3} sm={6} xs={6}>
-                {
-                   user.roles[0] === 'ROLE_ADMIN' ? 
-                   (
-                    <TextField
-                      size='small'
-                      color="brown"
-                      margin="normal"
-                      select
-                      fullWidth
-                      label= 'Campaña anterior'
-                      value={campañaAnterior}
-                      onChange={(e) => setCampañaAnterior(e.target.value)}
-                >
-                  {CampañaAnterior.map((prevCamp) => (
-                    <MenuItem key={prevCamp.value} value={prevCamp.value}>
-                      {prevCamp.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
-                   ) : (
-                    <TextField
-                    size='small'
-                    color="brown"
-                    margin="normal"
-                    select
-                    fullWidth
-                    label= 'Campaña anterior'
-                    value={campañaAnterior}
-                    onChange={(e) => setCampañaAnterior(e.target.value)}
-                    inputProps={
-                      { readOnly: true, }
-                    }
-                  >
-                    {CampañaAnterior.map((prevCamp) => (
-                      <MenuItem key={prevCamp.value} value={prevCamp.value}>
-                        {prevCamp.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                   )
-                }
-                </Grid>
-              </Grid>
-              <Grid container spacing={2} alignItems="center" justifyContent="center">
-                <Grid item md={3} sm={6} xs={6}>
-                  <TextField
-                      size='small'
-                      color="brown"
-                      margin="normal"
-                      select
-                      fullWidth
-                      label= 'Campaña actual'
-                      value={campañaActual}
-                      onChange={(e) => setCampañaActual(e.target.value)}
-                    >
-                      {CampañaActual.map((thisCamp) => (
-                        <MenuItem key={thisCamp.value} value={thisCamp.value}>
-                          {thisCamp.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                </Grid>
-              </Grid>
-              <Grid container spacing={2} alignItems="center" justifyContent="center">
-                <Grid item md={3} sm={6} xs={6}>
-                  <TextField
-                    size='small'
-                    color="brown"
-                    margin="normal"
-                    select
-                    fullWidth
-                    label= 'Uso de resíduos'
-                    value={usoResiduos}
-                    onChange={(e) => setUsoResiduos(e.target.value)}
-                  >
-                    {UsoResiduos.map((res) => (
-                      <MenuItem key={res.value} value={res.value}>
-                        {res.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Grid>
-              </Grid>
-              <Grid container spacing={2} alignItems="center" justifyContent="center">
-                <Grid item md={3} sm={6} xs={6}>
-                  <TextField
-                    size='small'
-                    color="brown"
-                    margin="normal"
-                    select
-                    fullWidth
-                    label= 'Primera visita'
-                    value={primeraVisita}
-                    onChange={(e) => setPrimeraVisita(e.target.value)}
-                  >
-                    {PrimeraVisita.map((primeraVisita) => (
-                      <MenuItem key={primeraVisita.value} value={primeraVisita.value}>
-                        {primeraVisita.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Grid>
-              </Grid>
-              <Grid container spacing={2} alignItems="center" justifyContent="center">
-                <Grid item md={3} sm={6} xs={6}>
-                    <TextField
-                      size='small'
-                      color="brown"
-                      margin="normal"
-                      select
-                      fullWidth
-                      label= 'Segunda visita'
-                      value={segundaVisita}
-                      onChange={(e) => setSegundaVisita(e.target.value)}
-                    >
-                      {SegundaVisita.map((segundaVisita) => (
-                        <MenuItem key={segundaVisita.value} value={segundaVisita.value}>
-                          {segundaVisita.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  </Grid>
               </Grid>
               <Grid container spacing={2} alignItems="center" justifyContent="center">
                 <Grid item md={12} sm={12} xs={12}>
