@@ -59,7 +59,7 @@ export function Dashboard() {
             
         }else if (!loggedInUser) {
             setuserExist(false)
-            window.location.href='https://campana-organicax.herokuapp.com/login'
+            window.location.href='https://localhost:8000/login'
         }
         
         

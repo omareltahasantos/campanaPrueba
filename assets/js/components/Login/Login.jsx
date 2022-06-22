@@ -45,7 +45,7 @@ export function Login() {
           setUser(foundUser);
         
 
-         window.location.href='https://campana-organicax.herokuapp.com/'
+         window.location.href='https://localhost:8000/'
           
           
          
@@ -65,7 +65,7 @@ export function Login() {
         email: email,
         password: password,
       }
-      const URL_API = 'https://campana-organicax.herokuapp.com/api/checkUser'
+      const URL_API = 'https://localhost:8000/api/checkUser'
       sendDataToApi(userJson, URL_API);
     };
 
@@ -77,7 +77,7 @@ export function Login() {
         const emailConverted = JSON.stringify(userJson.email)
         const passwordConverted = JSON.stringify(userJson.password)
 
-        axios.get('https://campana-organicax.herokuapp.com/api/checkifUserExists', {
+        axios.get('https://localhost:8000/api/checkifUserExists', {
         params: {
           email: emailConverted,
           password: passwordConverted
@@ -104,7 +104,7 @@ export function Login() {
             //store user in session storage
             sessionStorage.setItem('user', JSON.stringify(jsonResponse) )
 
-            window.location.href='https://campana-organicax.herokuapp.com/'
+            window.location.href='https://localhost:8000/'
 
            
 
